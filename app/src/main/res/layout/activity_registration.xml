@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="#d1c1f2"
     tools:context=".RegistrationActivity">
 
 
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="REGISTRATION PAGE"
         android:textStyle="bold|italic"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_marginBottom="8dp"
         android:textSize="20sp"
         android:gravity="center_horizontal|center_vertical"
@@ -23,7 +24,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Restaurant Name"
+        android:textColor="@color/black"
         android:inputType="textPersonName"
+        android:textColorHint="@color/light_white"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"/>
 
@@ -32,6 +35,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Location"
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_white"
         android:inputType="textPostalAddress"
         android:layout_marginBottom="8dp"/>
 
@@ -40,6 +45,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Phone Number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/light_white"
         android:inputType="phone"
         android:layout_marginBottom="8dp"/>
 
@@ -48,7 +55,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Description"
+        android:textColor="@color/black"
         android:inputType="textMultiLine"
+        android:textColorHint="@color/light_white"
         android:layout_marginBottom="16dp"/>
 
     <Button

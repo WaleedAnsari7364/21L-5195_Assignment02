@@ -27,15 +27,19 @@ public class RegistrationActivity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Generate a random rating
                 String Name=nameEditText.getText().toString().trim();
                 String Location=locationEditText.getText().toString().trim();
                 String Phone=phoneEditText.getText().toString().trim();
                 String Description=descriptionEditText.getText().toString().trim();
                 Random random = new Random();
-                int ratingInt = random.nextInt(5) + 1; // Generates a number between 1 and 5
+                int ratingInt = random.nextInt(5) + 1;
                 String rating = Integer.toString(ratingInt);
 
+                if(Name.isEmpty()){nameEditText.setError("Field cannot be empty");}
+                if(Location.isEmpty()){locationEditText.setError("Field cannot be empty");}
+                if(Phone.isEmpty()){phoneEditText.setError("Field cannot be empty");}
+                if(Description.isEmpty()){descriptionEditText.setError("Field cannot be empty");}
+                else{
                 // Intent to move to another activity (e.g., MainActivity)
                 Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
                 intent.putExtra("Name",Name);
@@ -44,7 +48,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 intent.putExtra("Description",Description);
                 intent.putExtra("Rating",rating);
                 setResult(RESULT_OK,intent);
-                finish();
+                finish();}
             }
         });
     }
